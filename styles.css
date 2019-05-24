@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    font: 15px arial, sans-serif;
+    /* align-content: center; */
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+}
+
+.title h1{
+    color: black;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    margin:10 0 0 0;
+    font-size: 5em;
+}
+
+#output {
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    
+}
+
+#output p {
+    font-size: 5em;
+}
+
+.ImgContainer {
+    position: absolute; /* Create an container to make it independet of other content on the site */
+    top: 200px;
+    left: 10%;
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Hide overflow to not affect the rest of the site */
+}
