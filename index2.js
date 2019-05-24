@@ -8,14 +8,14 @@ const fetchData = async () => {
         const data = await resp.text();
 
         const photoList = JSON.parse(data.slice(14, -1)).photos.photo
-
+        let output = '';
         Object.keys(photoList).forEach(photo => {
             output += `
             <img width="100%" height="*" src="https://farm${photoList[photo].farm}.staticflickr.com/${photoList[photo].server}/${photoList[photo].id}_${photoList[photo].secret}.jpg">
             `;
         });
         document.getElementById('output').innerHTML = output;
-    } catch(err){
+    } catch (err) {
         console.error(err, 'hmmm something happened');
         loader = '<p>No doggos found :( </p>';
         document.getElementById('output').innerHTML = loader;
